@@ -24,6 +24,7 @@ app.use('/api/orders', orderRoutes);
 app.use(notFound);
 app.use(errorHandler);
 //production
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/fronted/build')));
 
